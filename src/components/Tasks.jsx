@@ -65,6 +65,12 @@ export const Tasks = () => {
         setTodo(todos[index])
         setTodoIndex(index)
     }
+    
+    const handleClearAllTodo = () => {
+        setTodos([]);
+        localStorage.removeItem('todos');
+    }
+
 
     return (
     <div className='container'>
@@ -111,11 +117,18 @@ export const Tasks = () => {
                     </div>
                 </div>
             ))}
+
+            
             <div className='todo-item'>
                 {(todoIndex === -1 && onClickCheck) && <span style={{opacity: 0.5}}>
                     {todos.length + 1}.{todo}
                 </span>}
             </div>
+            {todos.length > 0 && (
+                <button onClick={handleClearAllTodo} className='clear-all-button'>
+                Clear All
+            </button>
+            )}
         </div>
     </div>
   )

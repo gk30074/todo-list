@@ -82,6 +82,22 @@
 .loading{
     animation: spin 1.5s linear infinite;
 }
+
+.clear-all-button {
+    background:linear-gradient(to right, #ff416dc5, #fffb2b); 
+    color: #fff; 
+    padding: 10px 15px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+  }
+  
+  .clear-all-button:hover {
+    background-color: #cc0000;
+  }
+
 .task-input:disabled {
     background: #fff8f8;
 }
