@@ -125,11 +125,14 @@ export const Tasks = () => {
                 </span>}
             </div>
         </div>
-        {todos.length > 0 && (
-            <button onClick={handleClearAllTodo} className='clear-all-button'>
-                Clear All
-            </button>
-        )}
+        <div>
+            {todos.length > 0 && (
+                <button onClick={handleClearAllTodo} className='clear-all-button'>
+                    Clear All
+                </button>
+            )}
+        </div>
+
     </div>
   )
 }
