@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Tasks.css'
-import { Accessibility,Trash2, FileEdit, Loader2} from 'lucide-react';
+import { Check,Trash2, FileEdit, Loader2} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { wait } from '../lib/utils';
 import { error, success } from '../lib/notification';
@@ -88,13 +88,13 @@ export const Tasks = () => {
                 }}
             />
             {!onClickCheck ? (
-            <Accessibility 
+            <Check 
                 onClick={handleAddTodo}
                 className='task-icon' 
                 style={{cursor:todo ? 'pointer':'not-allowed'}}
             />
             ):(
-                <Accessibility className='task-icon loading'/>
+                <Loader2 className='task-icon loading'/>
             )}
         </div>
         <div className='todos-wrapper'>
